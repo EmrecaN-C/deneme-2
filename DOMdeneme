@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        body {
+            background-color: #FFC94A;
+            padding: 20px;
+            margin: 0;
+        }
+
+        * p,
+        * div,
+        * span {
+            font-family: "Roboto", sans-serif !important;
+        }
+
+        .roboto-thin {
+            font-family: "Roboto", sans-serif !important;
+            font-weight: 100;
+            font-style: normal;
+        }
+
+        .roboto-light {
+            font-family: "Roboto", sans-serif !important;
+            font-weight: 300;
+            font-style: normal;
+        }
+
+        .roboto-regular {
+            font-family: "Roboto", sans-serif !important;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .roboto-medium {
+            font-family: "Roboto", sans-serif !important;
+            font-weight: 500;
+            font-style: normal;
+        }
+
+        .roboto-bold {
+            font-family: "Roboto", sans-serif !important;
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        .roboto-black {
+            font-family: "Roboto", sans-serif !important;
+            font-weight: 900;
+            font-style: normal;
+        }
+
+        .roboto-thin-italic {
+            font-family: "Roboto", sans-serif !important;
+            font-weight: 100;
+            font-style: italic;
+        }
+
+        .roboto-light-italic {
+            font-family: "Roboto", sans-serif !important;
+            font-weight: 300;
+            font-style: italic;
+        }
+
+        .roboto-regular-italic {
+            font-family: "Roboto", sans-serif !important;
+            font-weight: 400;
+            font-style: italic;
+        }
+
+        .roboto-medium-italic {
+            font-family: "Roboto", sans-serif !important;
+            font-weight: 500;
+            font-style: italic;
+        }
+
+        .roboto-bold-italic {
+            font-family: "Roboto", sans-serif !important;
+            font-weight: 700;
+            font-style: italic;
+        }
+
+        .roboto-black-italic {
+            font-family: "Roboto", sans-serif !important;
+            font-weight: 900;
+            font-style: italic;
+        }
+
+        .title {
+            font-size: 18px;
+            color: #35374B;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .info {
+            font-size: 16px;
+            color: #5755FE;
+            font-weight: 700;
+            margin-bottom: 8px;
+            line-height: 22px;
+        }
+
+        .explain-area {
+            background-color: #FA7070;
+            font-size: 16px;
+            color: #35374B;
+            font-weight: 700;
+            margin-bottom: 8px;
+            padding: 12px;
+            border-radius: 12px;
+        }
+
+        .big-title {
+            color: #35374B;
+            font-size: 42px;
+            font-weight: 800;
+        }
+
+        .comment {
+            font-size: 18px;
+            font-weight: 600;
+            color: #2C7865;
+        }
+
+        hr {
+            height: 2px;
+            background-color: #FA7070;
+            border: none;
+        }
+    </style>
+    <button id="onClick">Üzerime Tıkla</button>
+
+    <script>
+
+        function onClickEvent() {
+            alert('Merhaba Tech career ailesi')
+        }
+
+        document.getElementById('onClick').addEventListener('click', function () {
+            console.log('merhaba')
+        })
+
+    </script>
+
+    <button onclick="toTechCareer()">Go to Link</button>
+
+    <script>
+
+        let confirmText = "Geleceği Yazanlar Web sayfasına erişmek istiyor musunuz ?";
+
+        let url = "https://www.techcareer.net/?utm_campaign=Techcareer_TC_Search_Branding&utm_source=google&utm_medium=cpc&gclid=EAIaIQobChMIzKnDy9fM_gIVmuFRCh2i8g84EAAYASAAEgIq7fD_BwE";
+        function toTechCareer() {
+            if (confirm(confirmText)) {
+                location.href = url
+            }
+        }
+    </script>
+
+    <input type="text" id="onBlur" data-analytics-title="" onblur="onBlur()" placeholder="Adınız">
+
+    <script>
+
+        function onBlur() {
+            let newValue = document.getElementById('onBlur')
+            newValue.value = newValue.value.toUpperCase()
+        }
+
+    </script>
+
+    <select name="" onblur="onChange()" id="box">
+        <option value="almanya">Almanya</option>
+        <option value="tr">Türkiye</option>
+        <option value="us">Amerika</option>
+    </select>
+
+
+    <script>
+        function onChange() {
+            let newItem = document.getElementById('box').value;
+            console.log('Yeni seçilen eleman ' + newItem)
+        }
+    </script>
+
+    <form action="submit.php" method="post" onsubmit="onSubmit()">
+        <input type="text" name="name" id="onSubmit">
+        <button type="submit">Gönder</button>
+        <!-- <input type="submit" name="" id=""> -->
+    </form>
+
+    <script>
+
+        function onSubmit() {
+            let valueE = null
+            valueE = document.getElementById('onSubmit').value.length
+            alert(valueE)
+        }
+
+    </script>
+
+    <!--<div class="title">Keyboards Event</div>
+    <ul>
+        <li>onkepress</li>
+        <li>onkeydown</li>
+        <li>onkeyup</li>
+    </ul>-->
+
+    <div>
+        <input type="text" onkeypress="onKeypress()" placeholder="herhangi bir tuşa basınız">
+        <script>
+            function onKeypress() {
+                alert('herhangi bir tusa bastınız')
+            }
+        </script>
+    </div>
+
+
+    <!-- <div class="title">Dom Element</div>
+
+
+    <div class="explain-area">
+        <ul>
+            <li>getElementById</li>
+            <li>getElementByClassName</li>
+        </ul>
+    </div>-->
+
+
+    <div id="deneme">Deneme</div>
+
+    <script>
+        let deneme = document.getElementById('deneme')
+        // console.log(deneme)
+    </script>
+
+    <div class="deneme">Deneme - 2</div>
+    <script>
+        let deneme2 = document.getElementsByClassName('deneme')
+        console.log(deneme2)
+    </script>
+
+    <input type="text" name="deneme-3" placeholder="merhaba" value="merhaba">
+
+    <script>
+        let deneme3 = document.getElementsByName('deneme-3')[0].value
+        console.log(deneme3)
+    </script>
+
+    <span>Deneme - 4</span>
+
+    <script>
+        let deneme4 = document.getElementsByTagName('span');
+        console.log(deneme4)
+    </script>
+
+
+    <div class="list-elements">
+        <p class="info-itemaa">Merhaba</p>
+        <p class="info-item">Merhaba1</p>
+        <p class="info-item" id="merhaba2">Merhaba2</p>
+        <p class="info-item">Merhaba3</p>
+        <p class="info-item">Merhaba4</p>
+        <p class="info-item">Merhaba5</p>
+        <p id="merhaba1">merhaba6</p>
+    </div>
+
+    <script>
+        let listItem = document.querySelector('.info-item');
+        console.log(listItem)
+
+        let listItems = document.querySelectorAll('.info-item, #merhaba1')
+        console.log(listItems)
+
+        let merhaba2 = document.getElementById('merhaba2').getElementsByClassName('info-item');
+        console.log(merhaba2)
+
+
+    </script>
+    <input type="text" name="deneme-5" placeholder="merhabaaa" value="merhaba">
+
+
+
+    <script>
+        const newItem = document.createElement("div");
+        newItem.innerHTML = "Merhabalar bu siteye hoşgeldiniz";
+
+        const parent = document.querySelector("body");
+        parent.appendChild(newItem);
+        console.log(newItem);
+
+        newItem.style.backgroundColor = "blue";
+        newItem.style.color = "white";
+        newItem.style.padding = "10px";
+
+    
+    </script>
+    <br>
+    <script>
+        
+         const newItem2 = document.createElement("a");
+        newItem2.innerHTML = "Bunlar örneklerdir.";
+
+        const parent2 = document.querySelector("body");
+        parent2.appendChild(newItem2);
+        
+        newItem2.style.padding = "20px";
+        newItem2.style.backgroundColor = "red";
+
+    </script>
+
+</body>
+
+</html>
